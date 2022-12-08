@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Smart Pill Dispenser</string>
+
+    <string name="enter_valid_email">Enter Valid Email</string>
+
+    <string name="please_enter_password">Please enter password</string>
+    <string name="password_dont_match">Passwords don\'t match</string>
+    <string name="please_enter_password_confirmation">Please enter password confirmation</string>
+    <string name="please_enter_address">Please enter address</string>
+    <string name="please_enter_firstname">Please enter first name</string>
+    <string name="please_enter_lastname">Please enter last name</string>
+    <string name="please_enter_meternumber">Please enter meter number</string>
+
+    <string name="please_enter_pill_name">Please enter pill name</string>
+    <string name="please_enter_pill_description">Please enter pill description</string>
+    <string name="please_enter_pill_years">Please enter pill years</string>
+    <string name="please_enter_pill_consumption">Please enter pill consumption</string>
+    <string name="please_enter_pill_condition">Please enter pill condition</string>
+
+    <string name="please_wait">Please wait. . .</string>
+    <string name="no_network_connection">No network connection</string>
+    <string name="invalid_email_or_password">Invalid meter number or password!</string>
+    <string name="failed_registering">Failed registering!</string>
+
+    <string name="logout">Logout</string>
+    <string name="want_to_logout_from_app">Want to logout from app ?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="dont_have_account_register">Dont have account? Register</string>
+
+    <string name="search_here">Search Here. . . .</string>
+    <string name="pills">Pills</string>
+    <string name="add_pill">Add Pills</string>
+    <string name="view_pill">View Pills</string>
+
+    <string name="delete_pill">Want to delete Pills ?</string>
+    <string name="delete">Delete</string>
+    <string name="pills_details">Pills Details</string>
+    <string name="something_went_wrong">Something went wrong!</string>
+    <string name="title_activity_home2">Home2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="tarrif">Tarrif</string>
+    <string name="msg_token_fmt">token</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="address">Address</string>
+    <string name="register">Register</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_have_account_login">Already have account? Login</string>
+
+</resources>
