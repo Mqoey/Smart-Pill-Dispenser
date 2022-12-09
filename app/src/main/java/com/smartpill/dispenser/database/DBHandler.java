@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import com.smartpill.dispenser.Constant;
 import com.smartpill.dispenser.model.Pill;
+import com.smartpill.dispenser.model.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -242,6 +243,22 @@ public class DBHandler extends SQLiteOpenHelper {
 
         sqLiteDatabase.execSQL("delete from " + Constant.TABLE_ALARM);
         sqLiteDatabase.close();
+    }
+
+    public ArrayList<User> getUser() {
+        SQLiteDatabase sqLiteDatabase = this.getReadableDatabase();
+        Cursor cursorUser = sqLiteDatabase.rawQuery("SELECT * FROM " + Constant.TABLE_USERS, null);
+        ArrayList<User> userArrayList = new ArrayList<>();
+
+        if (cursorUser.moveToFirst()) {
+            userArrayList.add(new User(
+                    cursorUser.getString(0),
+                    cursorUser.getString(1),
+                    cursorUser.getString(2),
+                    cursorUser.getString(3)));
+        }
+        cursorUser.close();
+        return userArrayList;
     }
 
     @Override

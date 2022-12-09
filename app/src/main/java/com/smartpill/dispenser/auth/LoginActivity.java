@@ -1,6 +1,5 @@
 package com.smartpill.dispenser.auth;
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -24,7 +23,6 @@ public class LoginActivity extends BaseActivity {
     EditText etxtEmail, etxtPassword;
     TextView txtLogin;
     SharedPreferences sp;
-    ProgressDialog loading;
     Utils utils;
     DBHandler dbHandler;
 
