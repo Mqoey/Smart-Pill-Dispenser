@@ -20,7 +20,7 @@ import in.mayanknagwanshi.imagepicker.ImageSelectActivity;
 
 public class AddPillActivity extends BaseActivity {
 
-    EditText etxtpillName, etxtpillYears, etxtpillDescription, etxtpillConsumption, etxtpillCondition;
+    EditText etxtpillName, etxtpillDescription, etxtpillConsumption;
     TextView txtAddpill;
     ImageView imgpill;
     DBHandler dbHandler;
@@ -37,10 +37,8 @@ public class AddPillActivity extends BaseActivity {
         getSupportActionBar().setTitle(R.string.add_pill);
 
         etxtpillName = findViewById(R.id.etxt_pill_name);
-        etxtpillYears = findViewById(R.id.etxt_pill_years);
         etxtpillDescription = findViewById(R.id.etxt_pill_description);
         etxtpillConsumption = findViewById(R.id.etxt_pill_consumption);
-        etxtpillCondition = findViewById(R.id.etxt_pill_condition);
         imgpill = findViewById(R.id.image_pill);
         txtAddpill = findViewById(R.id.txt_add_pill);
 
@@ -50,10 +48,8 @@ public class AddPillActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 String name = etxtpillName.getText().toString().trim();
-                String years = etxtpillYears.getText().toString().trim();
                 String description = etxtpillDescription.getText().toString().trim();
                 String consumption = etxtpillConsumption.getText().toString().trim();
-                String condition = etxtpillCondition.getText().toString().trim();
 
                 if (name.isEmpty()) {
                     etxtpillName.setError(getString(R.string.please_enter_pill_name));
@@ -61,17 +57,11 @@ public class AddPillActivity extends BaseActivity {
                 } else if (description.isEmpty()) {
                     etxtpillDescription.setError(getString(R.string.please_enter_pill_description));
                     etxtpillDescription.requestFocus();
-                } else if (years.isEmpty()) {
-                    etxtpillYears.setError(getString(R.string.please_enter_pill_years));
-                    etxtpillYears.requestFocus();
                 } else if (consumption.isEmpty()) {
                     etxtpillConsumption.setError(getString(R.string.please_enter_pill_consumption));
                     etxtpillConsumption.requestFocus();
-                } else if (condition.isEmpty()) {
-                    etxtpillCondition.setError(getString(R.string.please_enter_pill_consumption));
-                    etxtpillCondition.requestFocus();
                 } else {
-                    dbHandler.addPills(name, description, condition, years, consumption, mediaPath);
+                    dbHandler.addPills(name, description, consumption, mediaPath);
                     Toasty.success(AddPillActivity.this, "Added successfully", Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(AddPillActivity.this, PillActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

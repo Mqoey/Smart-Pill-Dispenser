@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,16 +15,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.smartpill.dispenser.Constant;
 import com.smartpill.dispenser.R;
-import com.smartpill.dispenser.database.DBHandler;
 import com.smartpill.dispenser.model.Pill;
 import com.smartpill.dispenser.pill.ViewPillActivity;
 import com.smartpill.dispenser.utils.Utils;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 
 public class PillAdapter extends RecyclerView.Adapter<PillAdapter.MyViewHolder> {
 
@@ -33,7 +28,6 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.MyViewHolder> 
     private final Context context;
     Utils utils;
     SharedPreferences sp;
-    DBHandler dbHandler;
 
     public PillAdapter(Context context, ArrayList<Pill> applianceData) {
         this.context = context;
@@ -55,21 +49,9 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.MyViewHolder> 
         String name = applianceData.get(position).getPillName();
         String consumption = applianceData.get(position).getPillConsumption();
         String image = applianceData.get(position).getPillImage();
-        String applianceID = applianceData.get(position).getPillId();
 
         holder.txtApplianceName.setText(name);
         holder.txtApplianceConsumption.setText(consumption + " tablets per day");
-
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        String date = sdf.format(new Date());
-        Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat mdformat = new SimpleDateFormat("HH:mm:ss");
-        String time = mdformat.format(calendar.getTime());
-
-        boolean value = false;
-
-        value = sp.getBoolean("isChecked" + applianceID, value); // retrieve the value of your key
-        holder.appliance_switch.setChecked(value);
 
         File imageUrl = new File(image);
 
@@ -95,7 +77,6 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.MyViewHolder> 
 
         TextView txtApplianceName, txtApplianceCondition, txtApplianceConsumption;
         ImageView applianceImage;
-        Switch appliance_switch;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -104,7 +85,6 @@ public class PillAdapter extends RecyclerView.Adapter<PillAdapter.MyViewHolder> 
             txtApplianceCondition = itemView.findViewById(R.id.txt_condition_supplier);
             txtApplianceConsumption = itemView.findViewById(R.id.txt_appliance_consumption);
             applianceImage = itemView.findViewById(R.id.product_image);
-            appliance_switch = itemView.findViewById(R.id.switch_appliance);
 
             itemView.setOnClickListener(this);
         }

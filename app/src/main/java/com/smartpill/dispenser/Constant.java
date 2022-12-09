@@ -18,6 +18,7 @@ public class Constant {
     //table names
     public static final String TABLE_PILLS = "pills";
     public static final String TABLE_USERS = "users";
-    public static final String TABLE_ALARM = "alarm";
+    public static final String TABLE_ALARMS = "alarms";
+    public static final String TABLE_PRESCRIPTIONS = "prescriptions";
 
 }

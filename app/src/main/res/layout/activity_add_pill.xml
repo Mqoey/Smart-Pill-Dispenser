@@ -64,27 +64,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:padding="5dp"
-                android:text="Years" />
-
-            <EditText
-                android:id="@+id/etxt_pill_years"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="35dp"
-                android:background="@drawable/round_border"
-                android:hint="pill Years"
-                android:inputType="number"
-                android:padding="16dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:padding="5dp"
                 android:text="Consumption" />
 
             <EditText
@@ -97,27 +76,6 @@
                 android:background="@drawable/round_border"
                 android:hint="pill Consumption"
                 android:inputType="numberDecimal"
-                android:padding="16dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:padding="5dp"
-                android:text="Condition" />
-
-            <EditText
-                android:id="@+id/etxt_pill_condition"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="35dp"
-                android:background="@drawable/round_border"
-                android:hint="pill Condition"
-                android:inputType="text"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />

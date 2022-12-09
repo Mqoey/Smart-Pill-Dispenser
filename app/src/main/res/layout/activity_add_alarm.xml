@@ -23,14 +23,14 @@
                 android:text="Name" />
 
             <EditText
-                android:id="@+id/etxt_edit_pill_name"
+                android:id="@+id/etxt_alarm_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="35dp"
                 android:background="@drawable/round_border"
-                android:hint="Pill Name"
+                android:hint="Alarm Name"
                 android:inputType="text"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary"
@@ -42,55 +42,23 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:padding="5dp"
-                android:text="Description" />
+                android:text="Time" />
 
-            <EditText
-                android:id="@+id/etxt_edit_pill_description"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="35dp"
-                android:background="@drawable/round_border"
-                android:gravity="start"
-                android:hint="Pill Description"
-                android:inputType="textMultiLine"
-                android:padding="16dp"
-                android:textColor="@color/colorPrimary"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:padding="5dp"
-                android:text="Consumption" />
-
-            <EditText
-                android:id="@+id/etxt_edit_pill_consumption"
+            <TimePicker
+                android:id="@+id/etxt_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="22dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="35dp"
                 android:background="@drawable/round_border"
-                android:hint="Pill Consumption"
                 android:inputType="numberDecimal"
                 android:padding="16dp"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/edit_image_pill"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="40dp"
-                app:srcCompat="@drawable/image_placeholder" />
-
             <TextView
-                android:id="@+id/txt_edit_pill"
+                android:id="@+id/txt_add_alarm"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -101,7 +69,7 @@
                 android:background="@drawable/rounded_button"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Edit pill"
+                android:text="Add alarm"
                 android:textColor="#ffffff"
                 android:textSize="16sp"
                 android:textStyle="bold" />

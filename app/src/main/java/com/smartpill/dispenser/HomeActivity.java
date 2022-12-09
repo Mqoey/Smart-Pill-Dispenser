@@ -12,14 +12,16 @@ import android.view.View;
 import androidx.cardview.widget.CardView;
 
 import com.gitonway.lee.niftymodaldialogeffects.lib.NiftyDialogBuilder;
+import com.smartpill.dispenser.alarm.AlarmActivity;
 import com.smartpill.dispenser.auth.LoginActivity;
 import com.smartpill.dispenser.database.DBHandler;
+import com.smartpill.dispenser.pill.PillActivity;
 import com.smartpill.dispenser.profile.ProfileActivity;
 import com.smartpill.dispenser.utils.BaseActivity;
 
 public class HomeActivity extends BaseActivity {
 
-    CardView cardAppliances, cardProfile, cardTarrifs, cardTokens, cardThresholds, cardLogout, cardLoadShedding, cardStage;
+    CardView cardAppliances, cardProfile, cardTarrifs, cardLogout, cardLoadShedding, cardStage;
     SharedPreferences sp;
     SharedPreferences.Editor editor;
     DBHandler dbHandler;
@@ -56,19 +58,19 @@ public class HomeActivity extends BaseActivity {
             }
         });
 
-        cardAppliances.setOnClickListener(new View.OnClickListener() {
+        cardTarrifs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(HomeActivity.this, PillActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(HomeActivity.this, AlarmActivity.class);
+                startActivity(intent);
             }
         });
 
         cardAppliances.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(HomeActivity.this, PillActivity.class);
-//                startActivity(intent);
+                Intent intent = new Intent(HomeActivity.this, PillActivity.class);
+                startActivity(intent);
             }
         });
 

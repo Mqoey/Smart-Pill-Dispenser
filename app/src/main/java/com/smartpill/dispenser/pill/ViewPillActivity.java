@@ -28,7 +28,7 @@ import es.dmoral.toasty.Toasty;
 
 public class ViewPillActivity extends AppCompatActivity {
 
-    TextView viewName, viewDescription, viewCondition, viewConsumption, viewYear;
+    TextView viewName, viewDescription, viewConsumption;
     ImageView viewImage;
     Button editPill, deletePill;
     String PillID;
@@ -47,9 +47,7 @@ public class ViewPillActivity extends AppCompatActivity {
 
         viewName = findViewById(R.id.txt_view_name);
         viewDescription = findViewById(R.id.txt_view_description);
-        viewCondition = findViewById(R.id.txt_view_condition);
         viewConsumption = findViewById(R.id.txt_view_consumption);
-        viewYear = findViewById(R.id.txt_view_years);
         viewImage = findViewById(R.id.view_image);
         editPill = findViewById(R.id.btn_edit_pill);
         deletePill = findViewById(R.id.btn_delete_pill);

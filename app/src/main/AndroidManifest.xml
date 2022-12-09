@@ -41,6 +41,25 @@
         <activity
             android:name=".profile.ProfileActivity"
             android:exported="true" />
+        <activity
+            android:name=".pill.PillActivity"
+            android:exported="true" />
+        <activity
+            android:name=".pill.AddPillActivity"
+            android:exported="true" />
+        <activity
+            android:name=".pill.EditPillActivity"
+            android:exported="true" />
+        <activity
+            android:name=".pill.ViewPillActivity"
+            android:exported="true" />
+        <activity
+            android:name=".alarm.AddAlarmActivity"
+            android:exported="true" />
+        <activity
+            android:name=".alarm.AlarmActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

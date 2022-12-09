@@ -24,7 +24,7 @@ import es.dmoral.toasty.Toasty;
 
 public class EditPillActivity extends AppCompatActivity {
 
-    EditText etxtpillName, etxtpillYears, etxtpillDescription, etxtpillConsumption, etxtpillCondition;
+    EditText etxtpillName, etxtpillDescription, etxtpillConsumption;
     TextView txtEditpill;
     ImageView imgpill;
     DBHandler dbHandler;
@@ -42,10 +42,8 @@ public class EditPillActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.pills_details);
 
         etxtpillName = findViewById(R.id.etxt_edit_pill_name);
-        etxtpillYears = findViewById(R.id.etxt_edit_pill_years);
         etxtpillDescription = findViewById(R.id.etxt_edit_pill_description);
         etxtpillConsumption = findViewById(R.id.etxt_edit_pill_consumption);
-        etxtpillCondition = findViewById(R.id.etxt_edit_pill_condition);
         imgpill = findViewById(R.id.edit_image_pill);
         txtEditpill = findViewById(R.id.txt_edit_pill);
 
